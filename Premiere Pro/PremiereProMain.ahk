@@ -2,7 +2,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#Include %A_WorkingDir%\PremiereProShortcuts.ahk
+#Include %A_WorkingDir%\PremiereProGlobals.ahk
 #Include %A_ScriptDir%\Functions\ApplyPreset.ahk
 #Include %A_ScriptDir%\Functions\QuickSplit.ahk
 
@@ -31,4 +31,4 @@ f6:: ApplyPreset("MR Anchor")
 f7:: ApplyPreset("UM Anchor")
 f8:: ApplyPreset("DM Anchor")
 
-^c:: QuickSplit()
+c:: QuickSplit()

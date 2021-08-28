@@ -10,6 +10,15 @@ keywait, %A_PriorHotKey%
 if(WinActive("ahk_exe Adobe Premiere Pro.exe") = 0)
 	goto qsEnd
 
+;make sure timeline is currently selected - this is just for me, 
+;because I want to replace the normal C key with this, but still need to be able to type C in other places.
+ControlGetFocus, cCheck
+if(cCheck != wdTimeline)
+{
+	goto qsEnd
+}
+	
+
 ;Sets up the coord modes, making sure our pixel distances are consistent
 coordmode, pixel, Window
 coordmode, mouse, Window

@@ -34,7 +34,7 @@ SendInput,%kbSelectFindBox%
 Send %item%
 
 ;get effects panel position
-ControlGetPos, cX, cY, cW, cH, DroverLord - Window Class34, ahk_class Premiere Pro
+ControlGetPos, cX, cY, cW, cH, %wdEffectsPanel%, ahk_class Premiere Pro
 
 ;find top preset icon
 ImageSearch, iX, iY, cX, cY, cX + cW, cY + cH, Img/preset.png
