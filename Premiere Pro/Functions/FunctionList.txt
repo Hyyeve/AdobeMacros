@@ -1,0 +1,4 @@
+ApplyPreset - As the name suggests. (Takes a string input, searches for a preset with that name, and applies it to the currently hovered clip.)
+
+QuickSplit - Splits all clips currently under the playhead. (Finds playhead and uses the razor tool with shift held down to split all clips at that position)
+
