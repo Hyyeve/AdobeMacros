@@ -1,7 +1,5 @@
 ﻿QuickSplit()
 {
-;Gives us access to all the premiere pro shortcuts - handling them in one file makes it easy to change them.
-#Include %A_WorkingDir%\Premiere Pro Shortcuts.ahk
 
 SendMode Event
 ;Waits to make sure any previous hotkeys have been released
@@ -30,7 +28,7 @@ SetKeyDelay, 0
 MouseGetPos, moX, moY
 
 ;get timeline position
-ControlGetPos, cX, cY, cW, cH, DroverLord - Window Class49, ahk_class Premiere Pro
+ControlGetPos, cX, cY, cW, cH, DroverLord - Window Class58, ahk_class Premiere Pro
 
 ;find playhead
 ImageSearch, iX, iY, cX, cY, cX + cW, cY + cH, Img/playhead.png
@@ -44,14 +42,14 @@ if(ErrorLevel == 2)
 MouseMove, iX + 2, iY + 5, 0
 
 ;switch to razor tool
-SendInput kbSelectionTool := "v"
+SendInput, %kbRazorTool%
 ;hold down shift to slice all
-SendInput {Shift down}
+SendInput, {Shift down}
 ;slice
 MouseClick, left, , , 1
 ;switch back to select too
-SendInput {Shift up}
-SendInput %kbSelectionTool%
+SendInput, {Shift up}
+SendInput, %kbSelectionTool%
 
 qsEnd:
 

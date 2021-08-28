@@ -1,9 +1,6 @@
 ﻿ApplyPreset(item)
 {
 
-;Gives us access to all the premiere pro shortcuts - handling them in one file makes it easy to change them.
-#Include %A_WorkingDir%\Premiere Pro Shortcuts.ahk
-
 SendMode Event
 
 ;Waits to make sure any previous hotkeys have been released
@@ -30,8 +27,8 @@ SetKeyDelay, 0
 MouseGetPos, oX, oY 
 
 ;Selects the Effects Panel -> Find Box
-Sendinput, %kbSelectEffectsPanel%
-Sendinput,%kbSelectFindBox%
+SendInput, %kbSelectEffectsPanel%
+SendInput,%kbSelectFindBox%
 
 ;Types the preset we're looking for into the find box
 Send %item%

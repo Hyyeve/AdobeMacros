@@ -2,8 +2,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+#Include %A_WorkingDir%\PremiereProShortcuts.ahk
 #Include %A_ScriptDir%\Functions\ApplyPreset.ahk
 #Include %A_ScriptDir%\Functions\QuickSplit.ahk
+
 #IfWinActive ahk_exe Adobe Premiere Pro.exe
 
 ;;;;THIS SCRIPT IS JUST FOR SETTING HOTKEYS TO CALL FUNCTIONS;;;;
