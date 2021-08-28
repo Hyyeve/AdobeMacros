@@ -44,14 +44,14 @@ if(ErrorLevel == 2)
 MouseMove, iX + 2, iY + 5, 0
 
 ;switch to razor tool
-SendInput c 
+SendInput kbSelectionTool := "v"
 ;hold down shift to slice all
 SendInput {Shift down}
 ;slice
 MouseClick, left, , , 1
 ;switch back to select too
 SendInput {Shift up}
-SendInput v 
+SendInput %kbSelectionTool%
 
 qsEnd:
 

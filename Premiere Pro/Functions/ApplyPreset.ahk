@@ -30,8 +30,8 @@ SetKeyDelay, 0
 MouseGetPos, oX, oY 
 
 ;Selects the Effects Panel -> Find Box
-Sendinput, %selectEffectsPanel%
-Sendinput,%selectFindBox%
+Sendinput, %kbSelectEffectsPanel%
+Sendinput,%kbSelectFindBox%
 
 ;Types the preset we're looking for into the find box
 Send %item%
@@ -56,8 +56,8 @@ MouseClickDrag, Left, , , oX, oY, 0
 apEnd:
 
 ;Resets the effects panel for easier editing
-SendInput, %selectEffectsPanel%
-SendInput,%selectFindBox%
+SendInput, %kbSelectEffectsPanel%
+SendInput,%kbSelectFindBox%
 Send Video Presets
 
 ;Puts the mouse back where it started

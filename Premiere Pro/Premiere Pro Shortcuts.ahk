@@ -3,5 +3,8 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-selectEffectsPanel := "<+7"
-selectFindBox := "<+{F1}"
+kbSelectEffectsPanel := "<+7"
+kbSelectFindBox := "<+{F1}"
+
+kbSelectionTool := "v"
+kbRazorTool := "c"
