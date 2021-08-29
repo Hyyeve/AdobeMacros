@@ -33,6 +33,13 @@ SendInput,%kbSelectFindBox%
 ;Types the preset we're looking for into the find box
 Send %item%
 
+;this is where we'd usually need to wait for premiere to update the presets list.
+;If, however, it's pre-opened like mine (and reset to be pre-opened at the end of this function)
+;then premiere will update the list instantly
+;however, if not, or we want it to be reliable no matter what the current state is, we need to delay
+;70 ms seems to be about right for my system, you may want to increase/decrease for your own
+sleep 70
+
 ;get effects panel position
 ControlGetPos, cX, cY, cW, cH, %wdEffectsPanel%, ahk_class Premiere Pro
 
@@ -52,7 +59,7 @@ MouseClickDrag, Left, , , oX, oY, 0
 
 apEnd:
 
-;Resets the effects panel for easier editing
+;Resets and pre-opens my presets list for easier editing - this is just for how I work
 SendInput, %kbSelectEffectsPanel%
 SendInput,%kbSelectFindBox%
 Send Video Presets

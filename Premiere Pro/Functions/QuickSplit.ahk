@@ -48,12 +48,14 @@ if(ErrorLevel == 2)
 	goto qsEnd
 
 ;move mouse to playhead
-MouseMove, iX + 2, iY + 5, 0
+MouseMove, iX + 2, iY + 5, 0CC
 
 ;switch to razor tool
 SendInput, %kbRazorTool%
 ;hold down shift to slice all
 SendInput, {Shift down}
+;delay slightly to make sure premiere is consistently on the correct tool
+sleep 1
 ;slice
 MouseClick, left, , , 1
 ;switch back to select too
