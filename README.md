@@ -14,8 +14,8 @@ So far, it's been very slow going, only having made two scripts, but that's larg
 need for what I currently edit. More will appear as I decide to make them.
 
 That said, I'm really happy with the optimisation and improvements I've managed to do for those - Particularly with ApplyPreset(),
-I've dropped the code complexity massively and made it run almost instantly, with no sleep calls at all! (Though depending on your
-machine, you may need to re-add sleep calls if things aren't processed fast enough)
+I've dropped the code complexity massively and made it run almost instantly! (Though depending on your
+machine, you may need to adjust it if things aren't processed fast enough)
 
 Of note - Although all the code itself is almost completely dynamic and in most cases won't need any modification,
 I rely on ImageSearch to locate things inside panels. The images I use are made with my appearence settings (including
