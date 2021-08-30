@@ -4,7 +4,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include %A_WorkingDir%\PremiereProGlobals.ahk
 #Include %A_ScriptDir%\Functions\ApplyPreset.ahk
-#Include %A_ScriptDir%\Functions\QuickSplitAll.ahk
 #Include %A_ScriptDir%\Functions\QuickSplitHere.ahk
 
 #IfWinActive ahk_exe Adobe Premiere Pro.exe
@@ -33,4 +32,3 @@ f7:: ApplyPreset("UM Anchor")
 f8:: ApplyPreset("DM Anchor")
 
 ^f1:: QuickSplitHere()
-+c:: QuickSplitAll()
