@@ -1,21 +1,20 @@
-﻿QuickSplit()
+﻿QuickSplitAll()
 {
 
 SendMode Event
 ;Waits to make sure any previous hotkeys have been released
 keywait, %A_PriorHotKey%
 
-
 ;Just in case we're not in Premiere Pro
 if(WinActive("ahk_exe Adobe Premiere Pro.exe") = 0)
-	goto qsEnd
+	goto qsaEnd
 
 ;make sure timeline is currently selected - this is just for me, 
 ;because I want to replace the normal C key with this, but still need to be able to type C in other places.
 ControlGetFocus, cCheck
 if(cCheck != wdTimeline)
 {
-	goto qsEnd
+	goto qsaEnd
 }
 	
 
@@ -43,9 +42,9 @@ ControlGetPos, cX, cY, cW, cH, DroverLord - Window Class58, ahk_class Premiere P
 ImageSearch, iX, iY, cX, cY, cX + cW, cY + cH, Img/playhead.png
 
 if(ErrorLevel == 1)
-	goto qsEnd
+	goto qsaEnd
 if(ErrorLevel == 2)
-	goto qsEnd
+	goto qsaEnd
 
 ;move mouse to playhead
 MouseMove, iX + 2, iY + 5, 0CC
@@ -54,15 +53,16 @@ MouseMove, iX + 2, iY + 5, 0CC
 SendInput, %kbRazorTool%
 ;hold down shift to slice all
 SendInput, {Shift down}
-;delay slightly to make sure premiere is consistently on the correct tool
 sleep 1
 ;slice
 MouseClick, left, , , 1
-;switch back to select too
+;switch back to select tool
 SendInput, {Shift up}
 SendInput, %kbSelectionTool%
 
-qsEnd:
+
+
+qsaEnd:
 
 ;return mouse to start
 MouseMove, moX, moY, 0

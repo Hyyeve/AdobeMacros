@@ -37,8 +37,8 @@ Send %item%
 ;If, however, it's pre-opened like mine (and reset to be pre-opened at the end of this function)
 ;then premiere will update the list instantly
 ;however, if not, or we want it to be reliable no matter what the current state is, we need to delay
-;70 ms seems to be about right for my system, you may want to increase/decrease for your own
-sleep 70
+;135 ms seems to be about right for my system, you may want to increase/decrease for your own
+sleep 135
 
 ;get effects panel position
 ControlGetPos, cX, cY, cW, cH, %wdEffectsPanel%, ahk_class Premiere Pro

@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 global kbSelectEffectsPanel := "<+7"
 global kbSelectFindBox := "<+{F1}"
 global kbSelectionTool := "v"
-global kbRazorTool := "+c"
+global kbRazorTool := "c"
 
 ;window identifiers
 global wdTimeline := "DroverLord - Window Class58"
