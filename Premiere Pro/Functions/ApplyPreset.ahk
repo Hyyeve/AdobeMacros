@@ -37,18 +37,21 @@ Send %item%
 ;If, however, it's pre-opened like mine (and reset to be pre-opened at the end of this function)
 ;then premiere will update the list instantly
 ;however, if not, or we want it to be reliable no matter what the current state is, we need to delay
-;135 ms seems to be about right for my system, you may want to increase/decrease for your own
-sleep 135
+;10 ms seems to be about right for my system, you may want to increase/decrease for your own
+sleep 10
 
 ;get effects panel position
 ControlGetPos, cX, cY, cW, cH, %wdEffectsPanel%, ahk_class Premiere Pro
 
+;move mouse to top bin - we don't care what it is, but we need to make sure that no presets are already selected for the image search to work properly.
+MouseMove, cX + 40, cY + 35, 0
+;click to select it, deselecting whatever preset was last used
+MouseClick, left, , , 1 
+
 ;find top preset icon
 ImageSearch, iX, iY, cX, cY, cX + cW, cY + cH, Img/preset.png
 
-if(ErrorLevel == 1)
-	goto apEnd
-if(ErrorLevel == 2)
+if(ErrorLevel == 1 || ErrorLevel == 2)
 	goto apEnd
 
 ;move mouse to preset

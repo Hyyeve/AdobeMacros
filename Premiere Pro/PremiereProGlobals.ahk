@@ -10,5 +10,5 @@ global kbSelectionTool := "v"
 global kbRazorTool := "c"
 
 ;window identifiers
-global wdTimeline := "DroverLord - Window Class58"
-global wdEffectsPanel := "DroverLord - Window Class34"
+global wdTimeline := "DroverLord - Window Class54"
+global wdEffectsPanel := "DroverLord - Window Class39"
